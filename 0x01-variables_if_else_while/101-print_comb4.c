@@ -11,9 +11,9 @@ int main(void)
 	{
 		for (count2 = count1; count2 < 9; count2++)
 		{
-			for (count3 = count1; count3 < 10; count3++)
+			for (count3 = count2; count3 < 10; count3++)
 			{
-				if (count1 == count2 || count1 == count3 || count2 == count3)
+				if (count1 == count2 || count2 == count3 || count1 == count3)
 					continue;
 				putchar(count1 + '0');
 				putchar(count2 + '0');
