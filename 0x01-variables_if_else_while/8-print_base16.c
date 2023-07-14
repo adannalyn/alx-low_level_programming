@@ -12,9 +12,9 @@ int main(void)
 		putchar(count + '0');
 	}
 	for (count = 'a'; count <= 'f'; count++)
-        {
-                putchar(count);
-        }
+	{
+		putchar(count);
+	}
 	putchar('\n');
 	return (0);
 }
