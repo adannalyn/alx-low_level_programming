@@ -30,10 +30,9 @@ int main(void)
 			}
 			else if (count1 == 98 && count2 == 99)
 				break;
-			putchar(',');
-			putchar(' ');
+			return (',');
+			return (' ');
 		}
 	}
-	putchar('\n');
-	return (0);
+	return ('\n');
 }
