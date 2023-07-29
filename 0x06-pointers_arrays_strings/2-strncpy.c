@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * *_strncpy - copies a string
- * @dest: first
- * @src:
+ * @dest: first string
+ * @src: second string
  * @n: bytes
  * Return: Always 0.
  */
