@@ -7,11 +7,18 @@
 void reverse_array(int *a, int n)
 {
 	int count = 0;
+	int collect;
 
-	while (a[n] - 1)
+	for (count = 0; count < n; count++)
 	{
-		if (count < 9)
-			_putchar(count / 10 + '0');
-		_putchar(count % 10 + '0');
+		// collect = a[count];
+		// if (collect == '0')
+		// {
+		// 	_putchar('0');
+		// }
+		// if (count < 9)
+		// 	_putchar(count / 10 + '0');
+		// _putchar(count % 10 + '0');
+		_putchar(a[n]);
 	}
 }
