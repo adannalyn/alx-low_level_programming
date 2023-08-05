@@ -12,7 +12,6 @@ void print_string(char *str)
 	}
 }
 
-
 /**
  * main - entry point
  * @argc: count
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
 {
 	int count;
 
-	if (argc > 0)
+	if (argc)
 	{
 		for (count = 0; count < argc; count++)
 		{
