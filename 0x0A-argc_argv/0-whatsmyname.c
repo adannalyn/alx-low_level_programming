@@ -7,15 +7,15 @@
 */
 int main(int argc, char *argv[])
 {
-    int count;
+int count;
 
-    if (argc > 0)
-    {
-        for (count = 0; count < argc; count++)
-        {
-            _putchar(*argv[count]);
-        }
-        _putchar('\n');
-    }
-    return (0);
+if (argc > 0)
+{
+for (count = 0; count < argc; count++)
+{
+_putchar(*argv[count]);
+}
+_putchar('\n');
+}
+return (0);
 }
