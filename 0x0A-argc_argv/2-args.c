@@ -5,9 +5,26 @@
  * @argv: pointer
  * Return: 0
  */
+void print_string(char *str)
+{
+    while (*str != '\0')
+    {
+        putchar(*str);
+        str++;
+    }
+}
+
 int main(int argc, char *argv[])
 {
-	putchar(argv[argc]);
-	putchar('\n');
-	return (0);
+    int count;
+
+    if (argc)
+    {
+	    for (count = 0; count < argc; count++)
+	    {
+		    print_string(argv[count]);
+            putchar('\n');
+	    }
+    }
+    return (0);
 }
