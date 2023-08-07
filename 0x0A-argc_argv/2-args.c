@@ -5,9 +5,9 @@
  * @argv: pointer
  * Return: 0
  */
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
-	_putchar(argc - 1 + '0');
-	_putchar('\n');
+	putchar(argv[argc]);
+	putchar('\n');
 	return (0);
 }
