@@ -7,8 +7,21 @@
 */
 char *create_array(unsigned int size, char c)
 {
-    char *chase;
-       chase = (char *) malloc(size * sizeof(char));
-       _putchar(*chase);
-       return (chase);
+        char * d = NULL; unsigned int i;
+
+        if (size == 0)
+        {
+                return NULL;
+        }
+        d = (char *)malloc((size - 1) * sizeof(char));
+        if (d == NULL)
+        {
+                return (NULL);
+        }
+        for (i = 0; i < size; i++)
+        {
+                d[i] = c;
+        }
+        d[size] = '\0';
+        return (d);
 }
