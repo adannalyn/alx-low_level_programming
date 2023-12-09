@@ -1,8 +1,0 @@
-Updated. Elapsed time: 13.748015 sec.
-[x]
-
-- Finishing ... Done!
-x repo:
-    Cloning into '/Users/ezeadannalynda/.vim/plugged/repo'...
-    remote: Repository not found.
-    fatal: repository 'https://github.com/user/repo.git/' not found
