@@ -1,5 +1,18 @@
 #include "main.h"
-int _abs(int n)
+/**
+ * _abs - absolute value of an integer
+ * @absolute: check for absolute value
+ * Return: 0
+ */
+int _abs(int absolute)
 {
-        return (0);
+	if (absolute < 0)
+	{
+		return (-absolute);
+	}
+	else
+	{
+		return (absolute);
+	}
+	return (0);
 }
