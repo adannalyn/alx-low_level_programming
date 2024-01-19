@@ -1,5 +1,13 @@
 #include "main.h"
-char *_strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept) 
 {
-        return (0);
+        while (*s != '\0') 
+        {
+                if (_strchr(accept, *s) != NULL) 
+                {
+                        return s;
+                }
+                s++;
+        }
+        return NULL;
 }
