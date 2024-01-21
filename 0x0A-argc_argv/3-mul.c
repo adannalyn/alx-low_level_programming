@@ -3,23 +3,22 @@
 /**
  * main - entry point
  * @argc: count of arguments
- * @agv: array of pointers
+ * @argv: array of pointers
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i, mul = 0;
-	long num;
+	int num1, num2, mul;
 
-	if (argc < 1)
+	if (argc >  3 || argc < 2)
 	{
 		printf("Error\n");
-		return 1;
+		return (0);
 	}
-	for (i = 1; i < argc; i++)
-	{
-		num = strtol(argv[i], NULL, 10);
-	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	mul = num1 * num2;
 	printf("%d\n", mul);
 }
