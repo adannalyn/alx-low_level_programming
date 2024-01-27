@@ -8,6 +8,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *d;
+	unsigned int i;
 
 	if (size == 0)
 	{
@@ -15,13 +16,18 @@ char *create_array(unsigned int size, char c)
 	}
 
 	d = malloc(sizeof(char) * size);
-	if (*size == NULL)
+	if (d == NULL)
 	{
 		return (0);
 	}
-	for (c)
+	for (i = 0; i < c[size] != '\0'; i++)
 	{
+		d[i] = i;
 	}
-	free();
+	for (i = 0; i < size; i++)
+	{
+		_putchar(d[i]);
+	}
+	free(d);
 	return (0);
 }
