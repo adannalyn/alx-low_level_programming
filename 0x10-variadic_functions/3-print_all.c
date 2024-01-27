@@ -4,36 +4,33 @@
 /**
  * print_all - print out all
  * @format: string
- * Return: 0
  */
 void print_all(const char * const format, ...)
 {
 	char c;
 	int i;
 	float f;
-	char *new;
+	char *s;
 	va_list alx;
 
 	va_start(alx, format);
-	while (*format)
+	while (*format != '\0')
 	{
-		if (*format == 'c')
-			printf("%c,", c = va_arg(alx, int));
-		else if (*format == 'i')
-			printf("%i,", i = va_arg(alx, int));
-		else if (*format == 'f')
-			printf("%f,", f = va_arg(alx, double));
-	}
-	while (*format == 's')
-	{
-		new = va_arg(alx, char *);
-		if (new == NULL)
+		while (*format == '%')
 		{
-			printf("(nil)");
-		}
-		else if (new != NULL)
-		{
-			printf("%s,", new);
+			printf("%c", c = (char) va_arg(alx, int));
+			printf("%i", i = va_arg(alx, int));
+			printf("%f", f = va_arg(alx, double));
+			s = va_arg(alx, char *);
+			if (s != NULL)
+			{
+				printf("%s", s);
+			}
+			if (s == NULL)
+			{
+				printf("(nil)");
+			}
+			s++;
 		}
 	}
 	va_end(alx);
