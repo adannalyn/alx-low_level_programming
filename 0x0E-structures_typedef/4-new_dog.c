@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include "dog.h"
 
+/**
+ * _strcpy - copy strings
+ * @dest: destination
+ * @src: source
+ * Return: 0
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	char *ptr = dest;
+
+	while (*src != '\0')
+	{
+		*ptr = *src;
+		ptr++;
+		src++;
+	}
+	*ptr = '\0';
+
+	return dest;
+}
+
 
 /**
  * new_dog - create new dog
@@ -9,10 +31,19 @@
  * @owner: third member
  * Return: struct
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *ptr;
-	ptr = &dog_t;
+	dog_t *ptr;
+	ptr = (dog_t *) malloc(sizeof(dog_t));
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 
-	ptr->name;
+	ptr->name = name;
+	ptr->age = age;
+	ptr->owner = owner;
+	free(ptr);
+	return (0);
 }
