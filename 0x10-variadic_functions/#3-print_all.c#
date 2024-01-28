@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	va_start(alx, format);
 	while (*format == '%')
 	{
-		while ((*format == 'c') || (*format == 'i'))
+		while (*format == 's')
 		{
 			c = (char) va_arg(alx, int);
 			printf("%c", c);
