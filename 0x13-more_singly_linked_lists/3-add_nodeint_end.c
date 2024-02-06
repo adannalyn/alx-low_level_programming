@@ -1,6 +1,7 @@
 #include "lists.h"
 /**
  * add_nodeint_end - add a node at the end
+ * @head: pinter to head
  * @n: integer
  * Return: 0
  */
