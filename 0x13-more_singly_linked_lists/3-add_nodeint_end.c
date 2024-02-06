@@ -1,6 +1,8 @@
 #include "lists.h"
 /**
- * free
+ * add_nodeint_end - add a node at the end
+ * @n: integer
+ * Return: 0
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
