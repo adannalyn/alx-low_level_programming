@@ -22,10 +22,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	reed = read(fd, buf, count);
-	while (reed != '\0')
+	while (reed != 0)
 	{
 		printf("%ld", reed);
-	       reed++;
+	       reed--;
 	}
 	write(fd, buf, count);
 	close(fd);
