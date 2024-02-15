@@ -25,9 +25,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	reed = read(fd, buf, count);
 	while (reed != 0)
 	{
+<<<<<<< HEAD
 		if (reed == -1)
 			return (-1);
 		printf("%s", buf);
+=======
+		printf("%ld", reed);
+	       reed--;
+>>>>>>> 110edadc4c472f134a5e27c1310bf5a9c0563473
 	}
 	wraite = write(fd, buf, count);
 	if (wraite == -1)
