@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	size_t count = 100;
+	size_t count = 1024;
 	int fd, fe;
 	ssize_t reed, wraite;
 
@@ -17,22 +17,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	fd = open(filename, O_RDWR, letters);
+	fd = open(filename, O_RDONLY, letters);
+	reed = read(fd, buf, count);
+	if (reed == -1)
+		return (-1);
+	return (*buf);
+
+	fe = close(fd);
+	_putchar('\n');
+	if (fe == -1)
+		return (-1);
+
+	fd = open(filename, O_WRONLY, letters);
 	if (fd == -1)
 	{
 		return (0);
-	}
-	reed = read(fd, buf, count);
-	while (reed != 0)
-	{
-<<<<<<< HEAD
-		if (reed == -1)
-			return (-1);
-		printf("%s", buf);
-=======
-		printf("%ld", reed);
-	       reed--;
->>>>>>> 110edadc4c472f134a5e27c1310bf5a9c0563473
 	}
 	wraite = write(fd, buf, count);
 	if (wraite == -1)
@@ -44,3 +43,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	return (letters);
 
 }
+ 
