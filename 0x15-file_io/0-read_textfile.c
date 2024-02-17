@@ -2,8 +2,8 @@
 /**
  * read_textfile - read from a file
  * @filename: name of file
- * @letters:
- * Return:
+ * @letters: mode
+ * Return: number of letters
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -36,11 +36,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	wraite = write(fd, buf, count);
 	if (wraite == -1)
 		return (-1);
-	printf("%s",buf);
+	printf("%s", buf);
 	fe = close(fd);
 	if (fe == -1)
 		return (-1);
 	return (letters);
 
 }
- 
