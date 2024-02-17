@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	size_t count = 1024;
+	size_t count = 200;
 	int fd, fe;
 	ssize_t reed, wraite;
 
