@@ -8,38 +8,53 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
+<<<<<<< HEAD
 	size_t count = 200;
+=======
+>>>>>>> d244eac (files)
 	int fd, fe;
 	ssize_t reed, wraite;
 
-	buf = malloc(sizeof(char *) * count);
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	fd = open(filename, O_RDONLY, letters);
-	reed = read(fd, buf, count);
-	if (reed == -1)
-		return (-1);
-	return (*buf);
-
-	fe = close(fd);
-	_putchar('\n');
-	if (fe == -1)
-		return (-1);
-
-	fd = open(filename, O_WRONLY, letters);
-	if (fd == -1)
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
 	{
 		return (0);
 	}
-	wraite = write(fd, buf, count);
-	if (wraite == -1)
-		return (-1);
-	printf("%s", buf);
-	fe = close(fd);
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+	{
+		free(buf);
+		return (0);
+	}
+	reed = read(fd, buf, letters);
+	if (reed == -1)
+	{
+		free(buf);
+		close(fd);
+		return (0);
+	}
+
+	fe = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fe == -1)
-		return (-1);
-	return (letters);
+	{
+		free(buf);
+		close(fe);
+		return (0);
+	}
+	wraite = write(fe, buf, reed);
+	if (wraite == -1)
+	{
+		free(buf);
+		close(fd);
+		return (0);
+	}
+	free(buf);
+	close(fd);
+	return (reed);
 
 }
+ 
