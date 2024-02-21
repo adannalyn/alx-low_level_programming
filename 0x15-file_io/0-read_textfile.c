@@ -8,10 +8,6 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-<<<<<<< HEAD
-	size_t count = 200;
-=======
->>>>>>> d244eac (files)
 	int fd, fe;
 	ssize_t reed, wraite;
 
