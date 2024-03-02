@@ -8,11 +8,6 @@ int main(void)
 
 	printf("$ ");
 	nread = getline(&lineptr, &len, stdin);
-	if (nread == -1)
-	{
-		printf("Reading error\n");
-		return (1);
-	}
-	printf("%s\n", lineptr);
+	printf("%s", lineptr);
 
 }
