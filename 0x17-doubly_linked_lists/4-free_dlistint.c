@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_dlistint -
+ * free_dlistint - free the node
  * @head: head pointer
  */
 void free_dlistint(dlistint_t *head)
