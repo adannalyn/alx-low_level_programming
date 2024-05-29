@@ -1,9 +1,12 @@
 CC := gcc
-SRC := main.c school.c
+SRC := $(wildcard *.c)
 
 EXECUTABLE = school
 
 all: $(EXECUTABLE)
 
-school: $(SRC)
+$(EXECUTABLE): $(SRC)
 	$(CC) -o $@ $^
+
+clean:
+	rm -f $(EXECUTABLE)
