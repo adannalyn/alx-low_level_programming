@@ -1,0 +1,15 @@
+NAME = school
+
+all: $(NAME)
+
+CC = gcc
+
+SRC = $(wildcard *.c)
+
+OBJ = $(SRC:.c=.o)
+
+school: $(SRC)
+	$(CC) -o $(OBJ) $(SRC)
+
+$(OBJ): $(OBJ)
+	$(CC) -c $(SRC)
