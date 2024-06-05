@@ -6,8 +6,7 @@ NAME = school
 RM = rm -f
 
 all: ${OBJ}
-	${CC} ${CFLAGS} -c -o ${SRC}
-	${CC} main.o school.o -o ${NAME}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
 clean:
 	${RM} *~ *.swp ${NAME}
 oclean:
