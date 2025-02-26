@@ -7,12 +7,15 @@
 
 int main(void)
 {
-	int number, lowercase;
+	int number;
 
-	for (number = '0'; number <= '9'; number++)
-		putchar(number);
-	for (lowercase = 'a'; lowercase <= 'f'; lowercase++)
-		putchar(lowercase);
+	for (number = 0; number < 16; number++)
+	{
+		if (number < 10)
+			putchar('0' + number);
+		else if (number > 9)
+			putchar('a' + (number - 10));
+	}
 	putchar('\n');
 	return (0);
 }
