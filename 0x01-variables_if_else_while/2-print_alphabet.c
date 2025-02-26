@@ -7,9 +7,10 @@
 
 int main(void)
 {
-	char count;
-	for (count = 'a'; count < 'z'; count++)
-		putchar(count);
+	char lower_case;
+
+	for (lower_case = 'a'; lower_case < 'z'; lower_case++)
+		putchar(lower_case);
 	putchar('\n');
 	return (0);
 }
