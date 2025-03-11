@@ -15,18 +15,19 @@ int main(void)
 		{
 			for (third = first; third <= 9; third++)
 			{
-                for (fourth = second + 1; fourth <= 9; fourth++)
-                {
-                    putchar(first + '0');
-                    putchar(second + '0');
-                    putchar(' ');
-                    putchar(third + '0');
-                    putchar(fourth + '0');
-		    if (first == 9 && second == 8 && third == 9 && fourth == 9)
-			    break;
-                    putchar(',');
-                    putchar(' ');
-                }
+				for (fourth = 1; fourth <= 9; fourth++)
+				{
+					putchar(first + '0');
+					putchar(second + '0');
+					putchar(' ');
+					putchar(third + '0');
+					putchar(fourth + '0');
+					if (first == 9 && second == 8 &&
+					    third == 9 && fourth == 9)
+						break;
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
