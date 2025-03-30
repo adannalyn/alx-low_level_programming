@@ -14,9 +14,14 @@ int print_last_digit(int n)
 		remDigit = -remDigit;
 		_putchar('0' + remDigit);
 	}
-	if (remDigit > 0)
+	if (remDigit <= 9)
 	{
 		_putchar('0' + remDigit);
+	}
+	if (remDigit > 9)
+	{
+		_putchar('0' + (remDigit / 10));
+		_putchar('0' + (remDigit % 10));
 	}
 	return (0);
 }
