@@ -12,16 +12,7 @@ int print_last_digit(int n)
 	if (remDigit < 0)
 	{
 		remDigit = -remDigit;
-		_putchar('0' + remDigit);
 	}
-	if (remDigit <= 9)
-	{
-		_putchar('0' + remDigit);
-	}
-	if (remDigit > 9)
-	{
-		_putchar('0' + (remDigit / 10));
-		_putchar('0' + (remDigit % 10));
-	}
-	return (0);
+	_putchar(remDigit + '0');
+	return (remDigit);
 }
