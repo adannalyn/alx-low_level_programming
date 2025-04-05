@@ -11,16 +11,20 @@ void times_table(void)
 		for (times = 0; times < 10; times++)
 		{
 			output = count * times;
-			if (times != 0)
+			if (times == 0)
+			{
+				_putchar('0' + output);
+			}
+			else
 			{
 				_putchar(',');
 				_putchar(' ');
 				if (output <= 9)
 					_putchar(' ');
+				if (output >= 10)
+					_putchar('0' + (output / 10));
+				_putchar('0' + (output % 10));
 			}
-			if (output >= 10)
-				_putchar('0' + (output / 10));
-			_putchar('0' + (output % 10));
 		}
 		_putchar('\n');
 	}
