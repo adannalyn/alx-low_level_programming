@@ -1,0 +1,17 @@
+#include "main.h"
+/**
+ * main - entry point
+ */
+int main(void)
+{
+	int count, three, five;
+
+	if (count % 3 == 0)
+		three += count;
+	printf("%d, ", three);
+	if (count % 5 == 0)
+		five += count;
+	/*result = five + three;
+	  printf("%d", result);*/
+	return (0);
+}
