@@ -5,14 +5,21 @@
  */
 int main(void)
 {
-	int count, fibo = 1, first = 0, second = 1;
+	int count, fibo = 0, first = 1, second = 2;
 
-	for (count = 0; count < 50; count++)
+	for (count = 1; count < 50; count++)
 	{
-		printf("%d\n", first);
+		printf("%d", first);
 		fibo = first + second;
 		first = second;
 		second = fibo;
+
+		if (count != 49)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
+	putchar('\n');
 	return (0);
 }
