@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	int count, fibo = 0, first = 1, second = 2;
+	unsigned int count, fibo = 0, first = 1, second = 2;
 
 	for (count = 1; count < 50; count++)
 	{
-		printf("%d", first);
+		printf("%u", first);
 		fibo = first + second;
 		first = second;
 		second = fibo;
