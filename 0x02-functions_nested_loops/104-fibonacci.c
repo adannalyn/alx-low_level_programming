@@ -5,16 +5,16 @@
  */
 int main(void)
 {
-	unsigned long count, fibo = 0, first = 1, second = 2;
+	unsigned long count, fibo = 0, first = 1, second = 2, length = 98;
 
-	for (count = 1; count <= 50; count++)
+	for (count = 1; count <= length; count++)
 	{
 		printf("%lu", first);
 		fibo = first + second;
 		first = second;
 		second = fibo;
 
-		if (count != 50)
+		if (count != length)
 		{
 			putchar(',');
 			putchar(' ');
