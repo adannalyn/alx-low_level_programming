@@ -20,10 +20,10 @@ int main(void)
 			temp_low -= 1000000000;
 			temp_high += 1;
 		}
-		if (temp_high == 0)
-			printf(", %lu", temp_low);
-		else
+		if (temp_high > 0)
 			printf(", %lu%09lu", temp_high, temp_low);
+		else
+			printf(", %lu", temp_low);
 		first = second;
 		second = temp_low;
 		third = fourth;
