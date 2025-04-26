@@ -10,7 +10,7 @@ int main(void)
 	int count, length = 98;
 	unsigned long temp_low, temp_high;
 
-	printf("1, 2");;
+	printf("1, 2");
 	for (count = 2; count < length; count++)
 	{
 		temp_low = first + second;
@@ -20,10 +20,10 @@ int main(void)
 			temp_low -= 1000000000;
 			temp_high += 1;
 		}
-		if (temp_high > 0)
-			printf(", %lu%09lu", temp_high, temp_low);
-		else
+		if (temp_high == 0)
 			printf(", %lu", temp_low);
+		else
+			printf(", %lu%09lu", temp_high, temp_low);
 		first = second;
 		second = temp_low;
 		third = fourth;
