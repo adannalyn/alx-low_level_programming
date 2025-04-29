@@ -10,10 +10,8 @@
  * Return: 0
  */
 
-int positive_or_negative(void)
+int positive_or_negative(int n)
 {
-	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
@@ -23,5 +21,5 @@ int positive_or_negative(void)
 		printf("%d is zero\n", n);
 	else
 		printf("%d is negative\n", n);
-	return (0);
+	return (n);
 }
