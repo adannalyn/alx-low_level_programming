@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-#include <stdio.h>
+#include "main.h"
 
 /* betty style doc for function main goes there */
 /**
@@ -10,7 +7,7 @@
  * Return: 0
  */
 
-int positive_or_negative(int n)
+void positive_or_negative(int n)
 {
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -21,5 +18,4 @@ int positive_or_negative(int n)
 		printf("%d is zero\n", n);
 	else
 		printf("%d is negative\n", n);
-	return (n);
 }
