@@ -29,6 +29,14 @@ int main(void)
     day = convert_day(month, day);
     print_remaining_days(month, day, year);
 
+    month = 02;
+    day = 29;
+    year = 2001;
+
+    printf("Date: %02d/%02d/%04d\n", month, day, year);
+    day = convert_day(month, day);
+    print_remaining_days(month, day, year);
+
     month = 03;
     day = 01;
     year = 2009;
