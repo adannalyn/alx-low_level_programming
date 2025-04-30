@@ -19,5 +19,20 @@ int main(void)
 
         printf("%d is the largest number\n", largest);
 
+	a = 3;
+	b = 5;
+	c = 2;
+
+	largest = largest_number(a, b, c);
+
+	printf("%d is the largest number\n", largest);
+
+	a = -1;
+	b = 0;
+	c = -98;
+
+	largest = largest_number(a, b, c);
+
+	printf("%d is the largest number\n", largest);
         return (0);
 }
