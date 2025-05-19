@@ -1,21 +1,23 @@
 #include "main.h"
 /**
  * main - entry point
+ * Return: 0
  */
 int main(void)
 {
 	int jbl;
 
-	for (jbl = 1; jbl <= 100; jbl++)
+	printf("1");
+	for (jbl = 2; jbl <= 100; jbl++)
 	{
 		if (jbl % 15 == 0)
-			printf("FizzBuzz ");
+			printf(" FizzBuzz");
 		else if (jbl % 3 == 0)
-			printf("Fizz ");
+			printf(" Fizz");
 		else if (jbl % 5 == 0)
-			printf("Buzz ");
+			printf(" Buzz");
 		else
-			printf("%d ", jbl);
+			printf(" %d", jbl);
 	}
 	putchar('\n');
 	return (0);
