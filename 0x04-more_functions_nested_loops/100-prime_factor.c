@@ -4,7 +4,7 @@
  * Return: 0
  */
 
-int main()
+int main(void)
 {
 	long number = 612852475143, max_prime = -1, i;
 
@@ -13,7 +13,7 @@ int main()
 		max_prime = 2;
 		number /= 2;
 	}
-	for (i = 3; i <= sqrt(number); i+= 2)
+	for (i = 3; i <= sqrt(number); i += 2)
 	{
 		while (number % i == 0)
 		{
@@ -26,5 +26,5 @@ int main()
 
 	printf("%ld\n", max_prime);
 
-	return 0;
+	return (0);
 }
