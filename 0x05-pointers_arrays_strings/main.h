@@ -1,14 +1,2 @@
-#ifndef MAIN_H
-
-#include <stdio.h>
-#include <stdlib.h>
-int _putchar(char c);
-void reset_to_98(int *n);
-void swap_int(int *a, int *b);
-int _strlen(char *s);
-
-
-
-
-
-#endif
+VimCrypt~03!‹O~‰ñ¾0äh”¤U/òÜ9c
+Æù~TºÜcé.flÖîÊÎl ²…¿¤ØlA\O	8úYséÑeñ¯J®’©‰m)™Jc‡¾[éıòw~š1b|6—,G?òjB§r÷÷ÖçƒäOïIø°¥òÅ||¢®Cı–¶ä×i›^?œBÌg?BªS´ªß·Ü¢t0*ÂÏ!î§nµÓ·öQRy2E*ò{4îğn*éTD«^q£Pv:¡¨#[4İw¹ö$
