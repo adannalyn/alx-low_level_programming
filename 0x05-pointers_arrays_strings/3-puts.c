@@ -3,11 +3,13 @@
  * _puts - prints a string
  * @str: string
  */
-void _puts(char *str) {
-  int count;
+void _puts(char *str)
+{
+	int count;
 
-  for (count = 0; count < _strlen(str); count++) {
-    _putchar(str[count]);
-  }
-  _putchar('\n');
+	for (count = 0; str[count] != '\0'; count++)
+	{
+		putchar(str[count]);
+	}
+	_putchar('\n');
 }
