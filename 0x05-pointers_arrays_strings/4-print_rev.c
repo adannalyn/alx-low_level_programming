@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * print_rev - print in reverse
- * @s: string
+ * @str: string
  */
 int _strlen(char *str) {
-  int count;
+  int count = 0;
 
   while (*str != '\0') {
     count++;
