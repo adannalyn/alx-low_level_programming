@@ -6,24 +6,17 @@
  */
 void reverse_array(int *a, int n)
 {
-	int count = 0;
-	int digit;
+	int temp;
+	int start = 0;
+	int end = n - 1;
 
-	for (count = n - 1; count > 0; count--)
+	while (start < end)
 	{
-		digit = a[count];
-		if (digit > 9)
-		{
-			_putchar(digit / 10 + '0');
-			_putchar(digit % 10 + '0');
+		temp = a[start];
+		a[start] = a[end];
+		a[end] = temp;
 
-		}
-		else
-		{
-			_putchar(digit + '0');
-		}
-		_putchar(',');
-		_putchar(' ');
+		start++;
+		end--;
 	}
-	_putchar('\n');
 }
