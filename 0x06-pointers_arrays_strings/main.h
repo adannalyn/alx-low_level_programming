@@ -7,3 +7,4 @@ char *string_toupper(char *);
 #include <stdio.h>
 int _putchar(char c);
 #include <string.h>
+char *cap_string(char *);
