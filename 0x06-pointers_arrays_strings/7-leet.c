@@ -1,27 +1,35 @@
 #include "main.h"
+
 /**
- * leet - encode a string
- * @str: string
- * Return: 0
+ * leet - encode a string into 1337
+ *
+ * @str: the string to be processed
+ *
+ * Description:
+ *	Letters a and A should be replaced by 4
+ *	Letters e and E should be replaced by 3
+ *	Letters o and O should be replaced by 0
+ *	Letters t and T should be replaced by 7
+ *	Letters l and L should be replaced by 1
+ *
+ * Return: resultant string
  */
 char *leet(char *str)
 {
-	char *ptr = str;
-	char leet_map_lower[] = "aeotl";
-	char leet_map_upper[] = "AEOTL";
-	char leet_replace[] = "43071";
+	char ch[] = "aAeEoOtTlL";
+	char leet[] = "4433007711";
 	int i, j;
 
-	for (i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; ++i)
 	{
-		for (j = 0; leet_map_lower[j] != '\0'; j++)
+		for (j = 0; ch[j] != '\0'; ++j)
 		{
-			if (ptr[i] == leet_map_lower[j] || ptr[i] == leet_map_upper[j])
+			if (str[i] == ch[j])
 			{
-				ptr[i] = leet_replace[j];
+				str[i] = leet[j];
 				break;
 			}
 		}
 	}
-	return (ptr);
+	return (str);
 }

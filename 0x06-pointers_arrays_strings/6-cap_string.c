@@ -1,50 +1,53 @@
 #include "main.h"
-/**
- * is_separator - checks if a character is a word separator
- * @c: character to check
- *
- * Return: 1 if separator, 0 otherwise
- */
-int is_separator(char c)
-{
-	char separators[] = " \t\n,;.!?\"(){}";
-	int i;
 
-	for (i = 0; separators[i] != '\0'; i++)
-	{
-		if (c == separators[i])
-			return (1);
-	}
-	return (0);
-}
-
+int is_separator(char ch);
 /**
- * cap_string - capitalizes all words of a string
- * @str: string to capitalize
+ * cap_string - capitalize all words of a string
  *
- * Return: pointer to the capitalized string
+ * @str: string to be processed
+ *
+ * Description: use the following as separators of words
+ *              space, tab, new line or from the set ,.;!?"(){}
+ *
+ * Return: the resultant string
  */
 char *cap_string(char *str)
 {
-	int i = 0;
-	int new_word = 1;
+	int i;
 
-	while (str[i] != '\0')
+	i = 0;
+	if (str[i] >= 97 && str[i] <= 122)
+		str[i] -= 32;
+	for (i = 1; str[i] != '\0'; ++i)
 	{
-		if (is_separator(str[i]))
-		{
-			new_word = 1;
-		}
-		else if (new_word)
-		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-			}
-			new_word = 0;
-		}
-		i++;
+		if (is_separator(str[i - 1]))
+			if (str[i] >= 97 && str[i] <= 122)
+				str[i] -= 32;
 	}
-
+	if (str[i - 1] >= 97 && str[i - 1] <= 122)
+		str[i - 1] -= 32;
 	return (str);
+}
+
+/**
+ * is_separator - check whether a character is a separator
+ *
+ * @ch: the character to be checke
+ *
+ * Description: This function check whether a character is
+ * a separator
+ *
+ * Return: 1 if it's a separator, otherwise 0
+ */
+int is_separator(char ch)
+{
+	char separators[] = " \n\t.,;!?\"(){}";
+	int i;
+
+	for (i = 0; separators[i] != '\0'; ++i)
+	{
+		if (separators[i] == ch)
+			return (1);
+	}
+	return (0);
 }

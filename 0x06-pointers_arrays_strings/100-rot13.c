@@ -1,30 +1,31 @@
 #include "main.h"
+
 /**
- * rot13 - Cipher
- * @str: string
- * Return: 0
+ * rot13 - encode a string using rot13
+ *
+ * @str: the string to be encodes
+ *
+ * Description: encode a string using a substitution cipher
+ * which rotates a character in the alphabet by 13 places
+ *
+ * Return: the encoded string
  */
 char *rot13(char *str)
 {
-	int i = 0;
-	char current;
+	int i, j;
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char cipher[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; ++i)
 	{
-		current = str[i];
-
-		if ((current >= 'A' && current <= 'Z') || (
-			    current >= 'a' && current <= 'z'))
+		for (j = 0; alpha[j] != '\0'; ++j)
 		{
-			if ((current >= 'A' && current <= 'M') ||
-			    (current >= 'a' && current <= 'm'))
-				str[i] = current + 13;
-			else
-				str[i] = current - 13;
+			if (str[i] == alpha[j])
+			{
+				str[i] = cipher[j];
+				break;
+			}
 		}
-
-		i++;
 	}
-
 	return (str);
 }
