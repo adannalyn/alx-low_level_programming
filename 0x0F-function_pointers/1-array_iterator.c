@@ -1,25 +1,21 @@
+#include <stddef.h>
 #include "function_pointers.h"
 
 /**
- * array_iterator - function that executes as parameter of an array
- * @array: an array
- * @size: size
- * @action: pointer to function
+ * array_iterator - execute a function on an array of elements
+ *
+ * @array: the array to manipulate
+ * @size: size of the array
+ * @action: the pointer to function to execute
+ *
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	size_t i;
 
-	void *arr = malloc(sizeof(int) * size);
-	if (arr == NULL)
+	if (action != 0 && array != 0)
 	{
-		return;
+		for (i = 0; i < size; ++i)
+			action(array[i]);
 	}
-
-	for (i = 0; i < size; i++)
-	{
-		printf("%d",action(array[i]));
-	}
-
-	free(*array);
 }
